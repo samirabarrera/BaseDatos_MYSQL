@@ -1,7 +1,7 @@
-CREATE DATABASE BancoDB;
+CREATE DATABASE IF NOT EXISTS BancoDB;
 USE BancoDB;
 
-CREATE TABLE Cuentas (
+CREATE TABLE Cuentas IF NOT EXISTS (
     id_cuenta INT PRIMARY KEY,
     id_cliente INT,
     tipo_cuenta VARCHAR (20),
@@ -15,7 +15,7 @@ INSERT INTO Cuentas (id_cuenta, id_cliente, tipo_cuenta, saldo) VALUES
 (4, 503, 'Monetaria', 2000.00),
 (5, 504, 'Ahorro', 500.00);
 
-CREATE TABLE Clientes (
+CREATE TABLE Clientes IF NOT EXISTS (
     id_cliente INT PRIMARY KEY,
     Nombre VARCHAR (50),
     Ciudad VARCHAR (50)
