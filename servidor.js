@@ -24,5 +24,5 @@ connection.query('SELECT * FROM clientes', (err, results, fields) => {
         console.log("resultados: ", results);
         console.log("Campos: ", fields);
     }
-    closeConnection
+    closeConnection ()
 });
